@@ -1,14 +1,14 @@
 package main
 
+// import "fmt"
+
 func main() {
 	// var card string = "Ace of spades"
 	// card := newCard()
 	// fmt.Println(card)
 	// printState()
 
-	cards := newDeck()
-	hand, remainingCards := deal(cards, 5)
+	cards := newDeckFromFile("my_cards")
 
-	hand.print()
-	remainingCards.print()
+	cards.print()
 }
