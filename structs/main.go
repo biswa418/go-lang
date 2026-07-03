@@ -19,7 +19,10 @@ func main() {
 	// fmt.Printf("%+v", alex)
 	// fmt.Printf("\n%+v", returnpersonC())
 	jim := returnpersonC()
-	jim.updateName("Jimothy")
+
+	// created the pointer to pass
+	jimPointer := &jim
+	jimPointer.updateName("Jimothy")
 	jim.print()
 }
 
@@ -29,6 +32,6 @@ func (p personC) print(){
 }
 
 
-func (p personC) updateName(newFirstname string){
-	p.firstName = newFirstname
+func (pointerToP *personC) updateName(newFirstname string){
+	(*pointerToP).firstName = newFirstname
 }
