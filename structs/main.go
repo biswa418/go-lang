@@ -1,6 +1,6 @@
 package main
 
-import "fmt"
+// import "fmt"
 
 type person struct {
 	firstName string
@@ -9,29 +9,33 @@ type person struct {
 
 func main() {
 	// alex := person{firstName: "Lexy", lastName: "Coats"}
-	var alex person
+	// var alex person
 
-	alex.firstName = "Alex"
-	alex.lastName = "Anderson"
+	// alex.firstName = "Alex"
+	// alex.lastName = "Anderson"
 
 
-	fmt.Println(alex)
+	// fmt.Println(alex)
 	// fmt.Printf("%+v", alex)
 	// fmt.Printf("\n%+v", returnpersonC())
-	jim := returnpersonC()
+	// jim := returnpersonC()
 
 	// created the pointer to pass
-	jimPointer := &jim
-	jimPointer.updateName("Jimothy")
-	jim.print()
+	// jimPointer := &jim
+	// jimPointer.updateName("Jimothy")
+
+	// jim.updateName("Jimothy")
+	// jim.print()
+
+	gotcha()
 }
 
 
-func (p personC) print(){
-	fmt.Printf("\n%+v", p)
-}
+// func (p personC) print(){
+// 	fmt.Printf("\n%+v", p)
+// }
 
 
-func (pointerToP *personC) updateName(newFirstname string){
-	(*pointerToP).firstName = newFirstname
-}
+// func (pointerToP *personC) updateName(newFirstname string){
+// 	(*pointerToP).firstName = newFirstname
+// }
