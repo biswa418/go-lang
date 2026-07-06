@@ -7,19 +7,28 @@ import "fmt"
 // getGreetings()
 // show greetings()
 
+type bot interface {
+	getGreeting() string
+}
+
 type englishBot struct{}
 type spanishBot struct{}
 
 
 
 func main(){
-	// naive way
+	// interface way
 	eb := englishBot{}
-	// sb := spanishBot{}
+	sb := spanishBot{}
 
 	printGreeeting(eb)
-	// printGreeeting(sb)
+	printGreeeting(sb)
 
+}
+
+
+func printGreeeting(b bot){
+	fmt.Println(b.getGreeting())
 }
 
 func (englishBot) getGreeting() string {
@@ -33,9 +42,9 @@ func (sb spanishBot) getGreeting() string {
 	return "Hola!"
 }
 
-func printGreeeting(eb englishBot){
-	fmt.Println(eb.getGreeting())
-}
+// func printGreeeting(eb englishBot){
+// 	fmt.Println(eb.getGreeting())
+// }
 
 // func printGreeeting(sb spanishBot){
 // 	fmt.Println(sb.getGreeting())
