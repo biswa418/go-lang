@@ -17,6 +17,7 @@ func main(){
 	// fmt.Println(colors)
 	// delete(colors, "white")
 	// fmt.Println(colors)
+	delete(colors, "reddg")
 	printMap(colors)
 }
 
